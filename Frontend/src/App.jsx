@@ -4,6 +4,9 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Chat from "./Chatbot/chat";
 import "./Chatbot/widgets/common.css";
+import MeditationPage from "./components/MeditationClock/meditationPage";
+import Senses from "./components/ReduceAnxiety/Senses";
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,6 +14,8 @@ function App() {
   return (
     <>
       <Chat />
+      <MeditationPage/>
+      <Senses/>
     </>
   );
 }
