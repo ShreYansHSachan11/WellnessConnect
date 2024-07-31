@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,800;1,500&family=Playfair+Display:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap');
+
+.headerimg{
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+    margin: auto;
+}
+.header{
+    background-color: #E1F0DA;
+    margin: 0;
+    overflow: hidden;
+
+}
+.head-text-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 90vw;
+    text-align: center;
+    /* justify-content: center;
+    align-items: center; */
+
+}
+.head-img-text1{
+    position: absolute;
+    top: 25vh;
+    left: 10vw;
+    width: 25vw;
+    color: #fff;
+    font-size: 3.8rem;
+    font-family: "Economica", sans-serif;
+
+}
+.head-img-text2{
+    position: absolute;
+    top: 25vh;
+    left: 63vw;
+    width: 25vw;
+    color: #fff;
+    font-size: 3.8rem;
+    font-family: "Economica", sans-serif;
+
+}
+
+.path-chat-container{
+    display: flex;
+    justify-content: space-between;
+}
+.chat-button{
+    height: 10vh;
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.path-section{
+    color: #99BC85;
+    margin-left: 2vw;
+    font-family: "Economica", sans-serif;
+    font-size: 3.2rem;   
+    font-weight: 500;
+
+}
+.path-span{
+    margin-left: 2vw;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: "Economica", sans-serif;
+}
+.path-cols{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: row; */
+    text-align: center;
+    gap: 14vw;
+}
+.pm-cols{
+    width: 30vw;
+}
+.pm-img{
+    height: 24rem;
+    padding: 3rem;
+}
+.path-cols .pm-heading{
+    color: #99BC85;
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-family: "Economica", sans-serif;
+}
+.path-cols .pm-span{
+    font-size: 1.7rem;
+    font-weight: 510;
+    font-family: "Economica", sans-serif;
+}
+
+.mission-section .SDG1-img{
+    width:98vw;
+    padding-right: 5rem;
+}
+
+.mission-section .SDG2-img{
+    width:98vw;
+    padding-right: 5rem;
+}
+
+.SDG-img{
+    width: 98vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.sdg-text{
+    margin: 2rem;
+    font-size: 1.55rem;
+    font-weight: 800;
+    text-align: start;
+    font-family: "Economica", sans-serif;
+    
+}
