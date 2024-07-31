@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #50c878;
+  --background-color: #f0f4f8;
+  --text-color: #333;
+  --bubble-color: rgba(255, 255, 255, 0.3); /* More transparent */
+  --bubble-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.senses-quest-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.senses-quest-card {
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0; /* Remove border radius for full coverage */
+    padding: 2rem;
+    box-shadow: none; /* Remove shadow since it fills the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: none; /* Remove unnecessary transition */
+    backdrop-filter: none; /* Optional, as full page might not need blur */
+  }
+
+  .senses-quest-title,
+  .stage-name {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .bubble-container {
+    position: relative;
+    width: 100%;
+    height: 60%; /* Allocate 60% of the card's height */
+    overflow: hidden; /* Hide overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bubble {
+    position: absolute;
+    width: 100px; /* Larger size for visibility */
+    height: 100px; /* Larger size for visibility */
+    border-radius: 50%;
+    background-color: rgba(173, 216, 230, 0.5); /* Bluish tint */
+    border: 2px solid rgba(173, 216, 230, 0.8); /* Slightly darker border */
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 300;
+    box-shadow: 0 4px 10px var(--bubble-shadow);
+    transition: all 0.3s ease;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .bubble:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bubble.selected {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); } /* Increased floating effect */
+    100% { transform: translateY(0px); }
+  }
+  
+
+  .progress-bar {
+    width: 80%; /* Make sure this matches the width you want */
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 1rem auto;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+  }
+  
+  .next-button, .play-again-button {
+    width: 60%; /* Reduce width to fit within the card */
+    padding: 0.8rem;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .next-button:hover, .play-again-button:hover {
+    background-color: #3a7bd5;
+    transform: translateY(-2px);
+  }
+  
+  .completion-message {
+    text-align: center;
+    width: 100%;
+  }
+
+.completion-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.completion-text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+@media (max-width: 500px) {
+  .senses-quest-card {
+    padding: 1.5rem;
+  }
+
+  .senses-quest-title {
+    font-size: 2rem;
+  }
+
+  .stage-name {
+    font-size: 1.2rem;
+  }
+
+  .bubble {
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+  }
+}
