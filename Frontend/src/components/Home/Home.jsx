@@ -4,7 +4,7 @@ import phlogo from "../../assets/phlogo.png";
 import mhlogo from "../../assets/mhlogo.png";
 import SDG_1 from "../../assets/SDG_1.png";
 import SDG2 from "../../assets/SDG2.png";
-import button_chatbot from "../../assets/button_chatbot.png";
+
 import "./Home.css";
 import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
