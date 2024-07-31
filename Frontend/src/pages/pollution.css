@@ -1,0 +1,94 @@
+.gauge {
+  position: absolute;
+
+  width: 50vw;
+  margin-top: 10vh;
+}
+
+.centerer {
+  display: flex;
+  justify-content: center;
+}
+.arrow {
+  position: relative;
+  width: 22vw;
+  rotate: 180deg;
+  left: 50vw;
+  top: 37vh;
+  transform-origin: 0% 50%;
+}
+@keyframes rotateArrow1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(18deg);
+  }
+}
+
+@keyframes rotateArrow2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(54deg);
+  }
+}
+
+@keyframes rotateArrow3 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes rotateArrow4 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(126deg);
+  }
+}
+
+@keyframes rotateArrow5 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(162deg);
+  }
+}
+
+.arrow.aqi-1 {
+  animation: rotateArrow1 2s linear forwards;
+}
+
+.arrow.aqi-2 {
+  animation: rotateArrow2 2s linear forwards;
+}
+
+.arrow.aqi-3 {
+  animation: rotateArrow3 2s linear forwards;
+}
+
+.arrow.aqi-4 {
+  animation: rotateArrow4 2s linear forwards;
+}
+
+.arrow.aqi-5 {
+  animation: rotateArrow5 2s linear forwards;
+}
+
+.bg_image {
+  position: absolute;
+  width: 98.5vw;
+  height: 97.5vh;
+  opacity: 40%;
+}
+.advice-pollution {
+  margin-top: 6rem;
+  text-align: center;
+}

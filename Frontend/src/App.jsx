@@ -4,13 +4,15 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Chat from "./Chatbot/chat";
 import "./Chatbot/widgets/common.css";
+import WeatherHealth from "./pages/WeatherHealth";
+import Pollution from "./pages/pollution";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <Chat />
+      {/* <WeatherHealth /> */}
+      {/* <Pollution /> */}
     </>
   );
 }
