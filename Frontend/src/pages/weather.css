@@ -1,0 +1,27 @@
+#root {
+  margin: 0;
+  padding: 0;
+}
+.main_image {
+  position: fixed;
+  z-index: -1;
+
+  filter: opacity(45%);
+}
+.weather_heading {
+  text-align: center;
+  width: 80vw;
+  margin: auto;
+}
+.weather_flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+.advice {
+  margin: 1em;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.519);
+  border-radius: 2em;
+
+  width: 40vw;
+}

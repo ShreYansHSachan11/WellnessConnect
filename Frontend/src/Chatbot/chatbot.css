@@ -2,15 +2,21 @@
   position: fixed;
   margin-left: 78vw;
   margin-top: 15vh;
+  z-index: 40;
 }
 .chat-toggle-button {
   border: none;
+  padding: 0;
+  margin: 0;
+  z-index: 50;
 }
 .chatButton {
   position: fixed;
-  width: 5em;
+  width: 10vh;
+
   margin-left: 92vw;
   margin-top: 80vh;
+  z-index: 50;
 }
 
 .react-chatbot-kit-chat-inner-container {

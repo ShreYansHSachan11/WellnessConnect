@@ -10,10 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "react": "^18.3.1",
     "react-chatbot-kit": "^2.2.2",
+<<<<<<< HEAD
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1"
+=======
+    "react-dom": "^18.3.1"
+>>>>>>> 9cca359f7e70b5465bf92da225ddfff92cc8cba0
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
