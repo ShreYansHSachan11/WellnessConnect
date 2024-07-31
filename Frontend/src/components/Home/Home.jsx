@@ -39,7 +39,6 @@ const Home = () => {
               information you’re interested in
             </p>
           </div>
-          <img src={button_chatbot} className="chat-button" />
         </div>
 
         <div className="path-cols">
