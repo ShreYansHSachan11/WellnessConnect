@@ -5,18 +5,12 @@ import "./App.css";
 import Chat from "./Chatbot/chat";
 import "./Chatbot/widgets/common.css";
 import Home from "./components/Home/Home";
-import Pollution from "./pages/pollution";
-import BMI from "./components/recipeByCalories/bmiCalculator/BMI";
 
 function App() {
   return (
     <>
       <Chat />
-
       <Home />
-      {/* <Chat />
-      <Home /> */}
-      <BMI />
     </>
   );
 }
