@@ -1,21 +1,48 @@
 import React from "react";
 import "./common.css";
-
 export default function Physical() {
+  const buttonStyle = {
+    padding: "0.5em",
+    margin: "0.5em",
+    backgroundColor: "#99BC85",
+    borderRadius: "1em",
+  };
+  const handleNavigation = (path) => {
+    window.location.href = path;
+  };
+
   return (
     <>
       <ul>
         <li>
-          <button>Yoga</button>
+          <button style={buttonStyle}>Yoga</button>
         </li>
         <li>
-          <button>Exercises</button>
+          <button style={buttonStyle}>Exercises</button>
         </li>
         <li>
-          <button>Blogs</button>
+          <button
+            onClick={() => handleNavigation("/pollution_health")}
+            style={buttonStyle}
+          >
+            Pollution And Health
+          </button>
         </li>
         <li>
-          <button>Nutritional Inforation</button>
+          <button
+            onClick={() => handleNavigation("/weather_health")}
+            style={buttonStyle}
+          >
+            Weather And Health
+          </button>
+        </li>
+        <li>
+          <button
+            style={buttonStyle}
+            onClick={() => handleNavigation("/info_blogs")}
+          >
+            Blogs
+          </button>
         </li>
       </ul>
     </>

@@ -120,6 +120,9 @@ export default function weatherAdvice({ weatherdata }) {
       } else if (cloud > 50) {
         cloudAdvice +=
           "Moderate cloud cover! Be aware of changing weather conditions and carry a light jacket or umbrella if necessary.";
+      } else {
+        cloudAdvice +=
+          "Little to no Clouds,Rain Seems unlikely,plan accordingly";
       }
 
       // Pressure Advice
@@ -148,7 +151,7 @@ export default function weatherAdvice({ weatherdata }) {
   }, [weatherdata]);
 
   return (
-    <div>
+    <div className="main_weather_container">
       <div className="weather_heading">
         <h1>Weather And Health</h1>
         <p>

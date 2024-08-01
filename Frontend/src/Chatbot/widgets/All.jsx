@@ -3,24 +3,13 @@ import "./common.css";
 
 export default function All() {
   const buttonStyle = {
-    borderTop: "1px solid #d3e7c5",
-
-    background:
-      "-webkit-gradient(linear, left top, left bottom, from(#bfd8af), to(#ffffff))",
-
-    padding: "12.5px 25px",
-    WebkitBorderRadius: "40px",
-    MozBorderRadius: "40px",
-    borderRadius: "40px",
-    WebkitBoxShadow: "rgba(0, 0, 0, 1) 0 1px 0",
-    MozBoxShadow: "rgba(0, 0, 0, 1) 0 1px 0",
-    boxShadow: "rgba(0, 0, 0, 1) 0 1px 0",
-    textShadow: "rgba(0, 0, 0, 0.4) 0 1px 0",
-    color: "#000000",
-    fontSize: "13px",
-    fontFamily: '"Lucida Grande", Helvetica, Arial, Sans-Serif',
-    textDecoration: "none",
-    verticalAlign: "middle",
+    padding: "0.5em",
+    margin: "0.5em",
+    backgroundColor: "#99BC85",
+    borderRadius: "1em",
+  };
+  const handleNavigation = (path) => {
+    window.location.href = path;
   };
   return (
     <>
@@ -33,19 +22,48 @@ export default function All() {
           <button style={buttonStyle}>Exercises</button>
         </li>
         <li>
-          <button style={buttonStyle}>Blogs</button>
+          <button
+            onClick={() => handleNavigation("/pollution_health")}
+            style={buttonStyle}
+          >
+            Pollution And Health
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => handleNavigation("/weather_health")}
+            style={buttonStyle}
+          >
+            Weather And Health
+          </button>
+        </li>
+        <li>
+          <button
+            style={buttonStyle}
+            onClick={() => handleNavigation("/info_blogs")}
+          >
+            Blogs
+          </button>
         </li>
       </ul>
       <h4>Mental Health</h4>
       <ul>
         <li>
-          <button style={buttonStyle}>Meditation</button>
+          <button
+            onClick={() => handleNavigation("/meditation")}
+            style={buttonStyle}
+          >
+            Meditation
+          </button>
         </li>
+
         <li>
-          <button style={buttonStyle}>Coping Techniques</button>
-        </li>
-        <li>
-          <button style={buttonStyle}>Anxiety help</button>
+          <button
+            onClick={() => handleNavigation("/sense")}
+            style={buttonStyle}
+          >
+            Anxiety help
+          </button>
         </li>
       </ul>
     </>

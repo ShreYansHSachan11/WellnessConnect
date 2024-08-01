@@ -2,7 +2,9 @@ import React from "react";
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const handleHello = () => {
-    const botMessage = createChatBotMessage("Hello");
+    const botMessage = createChatBotMessage(
+      "Hello, my Name is Health bot,How Can I Help You?"
+    );
     setState((prev) => ({
       ...prev,
       messages: [...prev.messages, botMessage],

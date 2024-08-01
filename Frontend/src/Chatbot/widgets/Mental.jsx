@@ -2,17 +2,34 @@ import React from "react";
 import "./common.css";
 
 export default function Mental() {
+  const buttonStyle = {
+    padding: "0.5em",
+    margin: "0.5em",
+    backgroundColor: "#99BC85",
+    borderRadius: "1em",
+  };
+  const handleNavigation = (path) => {
+    window.location.href = path;
+  };
   return (
     <>
       <ul>
         <li>
-          <button>Meditation</button>
+          <button
+            onClick={() => handleNavigation("/meditation")}
+            style={buttonStyle}
+          >
+            Meditation
+          </button>
         </li>
         <li>
-          <button>Anxiety Help</button>
-        </li>
-        <li>
-          <button>Talk With Someone</button>
+          <button
+            onClick={() => handleNavigation("/sense")}
+            style={buttonStyle}
+          >
+            {" "}
+            Anxiety Help
+          </button>
         </li>
       </ul>
     </>

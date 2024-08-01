@@ -4,10 +4,9 @@ import phlogo from "../../assets/phlogo.png";
 import mhlogo from "../../assets/mhlogo.png";
 import SDG_1 from "../../assets/SDG_1.png";
 import SDG2 from "../../assets/SDG2.png";
+import { Link } from "react-router-dom";
 
 import "./Home.css";
-import Footer from "../footer/Footer";
-import Navbar from "../navbar/Navbar";
 
 const Home = () => {
   const [imageSrc, setImageSrc] = useState(SDG_1);
@@ -22,7 +21,6 @@ const Home = () => {
 
   return (
     <div className="header">
-      <Navbar />
       <div>
         <img src={head} alt="head-top" className="headerimg" />
         <div className="head-text-container">
@@ -43,7 +41,10 @@ const Home = () => {
 
         <div className="path-cols">
           <div className="pm-cols">
-            <img src={phlogo} alt="physical_health" className="pm-img" />
+            <Link to="/physical_nav">
+              {" "}
+              <img src={phlogo} alt="physical_health" className="pm-img" />
+            </Link>
             <h3 className="pm-heading">Physical Health</h3>
             <span className="pm-span">
               Find tips, exercises, and nutrition advice to enhance your
@@ -51,7 +52,10 @@ const Home = () => {
             </span>
           </div>
           <div className="pm-cols">
-            <img src={mhlogo} alt="mental_health" className="pm-img" />
+            <Link to="/mental_nav">
+              {" "}
+              <img src={mhlogo} alt="mental_health" className="pm-img" />
+            </Link>
             <h3 className="pm-heading">Mental Health</h3>
             <span className="pm-span">
               Discover strategies and support for a healthier mind and emotional
@@ -69,7 +73,7 @@ const Home = () => {
           id="SDG"
           alt="dynamic"
           tabIndex="0"
-          onFocus={handleOnFocus}
+          onMouseOver={handleOnFocus}
           onBlur={handleOnBlur}
         />
       </div>
@@ -87,7 +91,6 @@ const Home = () => {
           well-being of societies.
         </p>
       }
-      <Footer />
     </div>
   );
 };

@@ -24,6 +24,7 @@ const config = {
       widgetName: "List",
       widgetFunc: (props) => <List {...props} />,
     },
+
     {
       widgetName: "physical",
       widgetFunc: (props) => <Physical {...props} />,
@@ -45,7 +46,9 @@ const config = {
       backgroundColor: "#99BC85",
     },
   },
-  botAvatar: (props) => <MyAvatar {...props} />,
+  customComponents: {
+    botAvatar: (props) => <MyAvatar {...props} />,
+  },
 };
 
 export default config;
