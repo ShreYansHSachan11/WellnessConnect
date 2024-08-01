@@ -1,26 +1,44 @@
 import React, { useState } from "react";
 import { PieChart, Pie, Cell, Sector, ResponsiveContainer } from "recharts";
-import "./BMI.css";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./BMI.css";
 
 const BMI = () => {
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
+  const [age, setAge] = useState("");
+  const [gender, setGender] = useState("");
   const [bmi, setBmi] = useState(null);
+  const [bmr, setBmr] = useState(null);
   const [bmiCategory, setBmiCategory] = useState("");
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const calculateBmi = () => {
-    if (!weight || !height) {
-      toast.error("Please enter both weight and height."); // Show error toast
+  const calculate = () => {
+    if (!weight || !height || !age || !gender) {
+      toast.error("Please fill in all fields.");
       return;
     }
+    calculateBmi();
+    calculateBmr();
+  };
+
+  const calculateBmi = () => {
     const heightInMeters = height / 100;
     const bmiValue = (weight / (heightInMeters * heightInMeters)).toFixed(1);
     setBmi(bmiValue);
     determineBmiCategory(bmiValue);
     setActiveIndex(determineActiveIndex(bmiValue));
+  };
+
+  const calculateBmr = () => {
+    let bmrValue;
+    if (gender === "male") {
+      bmrValue = 88.362 + 13.397 * weight + 4.799 * height - 5.677 * age;
+    } else {
+      bmrValue = 447.593 + 9.247 * weight + 3.098 * height - 4.330 * age;
+    }
+    setBmr(bmrValue.toFixed(2));
   };
 
   const determineBmiCategory = (bmiValue) => {
@@ -68,7 +86,6 @@ const BMI = () => {
       endAngle,
       fill,
       payload,
-      percent,
     } = props;
     const sin = Math.sin(-RADIAN * midAngle);
     const cos = Math.cos(-RADIAN * midAngle);
@@ -127,8 +144,8 @@ const BMI = () => {
 
   return (
     <div className="bmi-calculator">
-      <h1>BMI Calculator</h1>
-      <div>
+      <h1>BMI & BMR Calculator</h1>
+      <div className="input-group">
         <label>Weight (kg): </label>
         <input
           type="number"
@@ -136,7 +153,7 @@ const BMI = () => {
           onChange={(e) => setWeight(e.target.value)}
         />
       </div>
-      <div>
+      <div className="input-group">
         <label>Height (cm): </label>
         <input
           type="number"
@@ -144,36 +161,54 @@ const BMI = () => {
           onChange={(e) => setHeight(e.target.value)}
         />
       </div>
-      <button onClick={calculateBmi}>Calculate BMI</button>
-     
-      <ResponsiveContainer width="100%" height={400}>
-        <PieChart>
-          <Pie
-            activeIndex={activeIndex}
-            activeShape={bmi !== null ? renderActiveShape : undefined}
-            data={data}
-            cx="50%"
-            cy="50%"
-            innerRadius={70}
-            outerRadius={150}
-            startAngle={180}
-            endAngle={0}
-            fill="#8884d8"
-            dataKey="value"
-          >
-            {data.map((entry, index) => (
-              <Cell
-                key={`cell-${index}`}
-                fill={COLORS[index % COLORS.length]}
-              />
-            ))}
-          </Pie>
-        </PieChart>
-      </ResponsiveContainer>
+      <div className="input-group">
+        <label>Age: </label>
+        <input
+          type="number"
+          value={age}
+          onChange={(e) => setAge(e.target.value)}
+        />
+      </div>
+      <div className="input-group">
+        <label>Gender: </label>
+        <select value={gender} onChange={(e) => setGender(e.target.value)}>
+          <option value="">Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <button onClick={calculate}>Calculate BMI & BMR</button>
+      <div className="chart-container">
+        <ResponsiveContainer width="100%" height={400}>
+          <PieChart>
+            <Pie
+              activeIndex={activeIndex}
+              activeShape={bmi !== null ? renderActiveShape : undefined}
+              data={data}
+              cx="50%"
+              cy="50%"
+              innerRadius={70}
+              outerRadius={150}
+              startAngle={180}
+              endAngle={0}
+              fill="#8884d8"
+              dataKey="value"
+            >
+              {data.map((entry, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill={COLORS[index % COLORS.length]}
+                />
+              ))}
+            </Pie>
+          </PieChart>
+        </ResponsiveContainer>
+      </div>
       {bmi && (
-        <div className="bmi-result">
+        <div className="result">
           <h2>Your BMI: {bmi}</h2>
           <h2>Category: {bmiCategory}</h2>
+          <h2>Your BMR: {bmr} kcal/day</h2>
         </div>
       )}
       <ToastContainer />
