@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./pollution.css";
+import GaugeChart from "react-gauge-chart";
 
 import pol1 from "../assets/pol1.jpg";
 import pol2 from "../assets/pol2.jpg";
 import pol3 from "../assets/pol3.jpg";
 import pol4 from "../assets/pol4.jpg";
 import pol5 from "../assets/pol5.jpg";
-import guage from "../assets/gauge.png";
-import arrow from "../assets/Arrow1.png";
 
 export default function Pollution() {
   const [location, setLocation] = useState({ lat: null, lon: null });
@@ -108,17 +107,27 @@ export default function Pollution() {
       {aqi && (
         <div>
           <img className="bg_image" src={img} alt="Pollution Background" />
-          <div className="centerer">
-            <img className="gauge" src={guage} alt="Gauge" />
-          </div>
-          <div>
-            <img className={`arrow ${arrowClass}`} src={arrow} alt="Arrow" />
-          </div>
-          <br />
-          <div className="advice-pollution">
-            <h2>The AQI index in Your City is</h2>
-            <h1>{aqi.list[0].main.aqi}</h1>
-            <p>{advice}</p>
+
+          <div className="content-pollution">
+            {" "}
+            <GaugeChart
+              style={{
+                zIndex: 5,
+                width: "50vw",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+              id="gauge-chart2"
+              nrOfLevels={5}
+              arcPadding={0.02}
+              percent={(aqi.list[0].main.aqi / 10) * 2 - 0.1}
+            />
+            <br />
+            <div className="advice-pollution">
+              <h2>The AQI index in Your City is</h2>
+              <h1>{aqi.list[0].main.aqi}</h1>
+              <p>{advice}</p>
+            </div>
           </div>
         </div>
       )}

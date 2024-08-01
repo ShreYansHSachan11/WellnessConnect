@@ -5,11 +5,13 @@ import "./App.css";
 import Chat from "./Chatbot/chat";
 import "./Chatbot/widgets/common.css";
 import Home from "./components/Home/Home";
+import Pollution from "./pages/pollution";
 
 function App() {
   return (
     <>
       <Chat />
+
       <Home />
     </>
   );
