@@ -15,6 +15,7 @@ import PhysicalNav from "./components/Navigators/physical/PhysicalNav";
 import Senses from "./components/ReduceAnxiety/Senses";
 import MentalNav from "./components/Navigators/physical/MentalNav";
 import MeditationPage from "./components/MeditationClock/meditationPage";
+import Exercise from "./components/Exercises/exercises"
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/sense" element={<Senses />} />
           <Route path="/mental_nav" element={<MentalNav />} />
           <Route path="/meditation" element={<MeditationPage />} />
+          <Route path="/exercises" element={<Exercise />} />
         </Routes>
       </Router>
       <Footer />
