@@ -26,7 +26,7 @@ function Footer() {
           <div className="col">
             <h4>CONNECT With Us</h4>
             <ui className="list-unstyled">
-              <li>Instagram</li>
+              <a href=""></a><li>Instagram</li>
               <li>Facebook</li>
               <li>Gmail</li>
             </ui>
