@@ -44,6 +44,11 @@ export default function Physical() {
             Blogs
           </button>
         </li>
+        <li>
+          <button style={buttonStyle} onClick={() => handleNavigation("/BMI")}>
+            BMI and Calorie+Recipes
+          </button>
+        </li>
       </ul>
     </>
   );

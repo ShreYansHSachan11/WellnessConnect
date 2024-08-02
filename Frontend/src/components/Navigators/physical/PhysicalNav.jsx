@@ -5,6 +5,7 @@ import "./PhysicalNav.css";
 import { Link } from "react-router-dom";
 import WeatherButton from "../../../assets/weatherbutton.jpg";
 import yoga from "../../../assets/yoga.jpg";
+import BMIbutton from "../../../assets/BMI.jpg";
 
 export default function PhysicalNav() {
   return (
@@ -57,7 +58,7 @@ export default function PhysicalNav() {
       <div className="flex-buttons">
         <div>
           <Link to="/BMI">
-            <img className="physical_nav_buttons" src={BlogButton} />
+            <img className="physical_nav_buttons" src={BMIbutton} />
 
             <div className="button-descriptor">BMI and Nutritional Info</div>
           </Link>
