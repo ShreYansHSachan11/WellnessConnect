@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  object-fit: fi;;;
+  object-fit: fill;
   z-index: 100;
 }
 .nav-container .logo-img {

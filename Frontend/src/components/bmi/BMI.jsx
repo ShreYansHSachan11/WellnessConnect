@@ -13,24 +13,25 @@ const BMI = () => {
   const [gender, setGender] = useState("");
   const [bmi, setBmi] = useState(null);
   const [bmr, setBmr] = useState(null);
+  const [adjustedCalories, setAdjustedCalories] = useState(null);
   const [bmiCategory, setBmiCategory] = useState("");
   const [activeIndex, setActiveIndex] = useState(null);
   const [recipes, setRecipes] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
   useEffect(() => {
-    if (bmr !== null) {
+    if (adjustedCalories !== null) {
       fetchRecipes();
     }
-  }, [bmr]);
+  }, [adjustedCalories]);
 
   const fetchRecipes = async () => {
     try {
       const apiKey = import.meta.env.VITE_REACT_APP_RECIPE_API_NUTRIENTS;
       const response = await axios.get(
         `https://api.spoonacular.com/recipes/findByNutrients?minCalories=${
-          bmr / 3 - 100
-        }&maxCalories=${bmr / 3 + 100}&number=8&apiKey=${apiKey}`
+          adjustedCalories / 3 - 100
+        }&maxCalories=${adjustedCalories / 3 + 100}&number=8&apiKey=${apiKey}`
       );
       setRecipes(response.data);
     } catch (error) {
@@ -41,7 +42,6 @@ const BMI = () => {
   const fetchRecipeInfo = async (id) => {
     try {
       const apiKey = import.meta.env.VITE_REACT_APP_RECIPE_API_NUTRIENTS;
-
       const res = await axios.get(
         `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${apiKey}`
       );
@@ -77,6 +77,17 @@ const BMI = () => {
       bmrValue = 447.593 + 9.247 * weight + 3.098 * height - 4.33 * age;
     }
     setBmr(bmrValue.toFixed(2));
+
+    // Adjust calories based on BMI category
+    let adjustedCaloriesValue = bmrValue;
+    if (bmiCategory === "Underweight") {
+      adjustedCaloriesValue = bmrValue + 300;
+    } else if (bmiCategory === "Overweight") {
+      adjustedCaloriesValue = bmrValue - 300;
+    } else if (bmiCategory === "Obesity") {
+      adjustedCaloriesValue = bmrValue - 500;
+    }
+    setAdjustedCalories(adjustedCaloriesValue.toFixed(2));
   };
 
   const determineBmiCategory = (bmiValue) => {
@@ -249,12 +260,12 @@ const BMI = () => {
           {bmi && (
             <div className="result">
               <h2>Your BMI: {bmi}</h2>
-              <h2>Calories intake per day: {bmr} kcal/day</h2>
+              <h2>Calories intake per day: {adjustedCalories} kcal/day</h2>
             </div>
           )}
         </div>
 
-        {bmr && recipes.length > 0 && (
+        {adjustedCalories && recipes.length > 0 && (
           <div className="recipes">
             <h2>Recommended Recipes</h2>
             <div className="recipe-list">
