@@ -11,11 +11,11 @@ import "./Home.css";
 const Home = () => {
   const [imageSrc, setImageSrc] = useState(SDG_1);
 
-  const handleOnFocus = () => {
+  const handleOnMouseEnter = () => {
     setImageSrc(SDG_Final);
   };
 
-  const handleOnBlur = () => {
+  const handleOnMouseLeave = () => {
     setImageSrc(SDG_1);
   };
 
@@ -42,7 +42,6 @@ const Home = () => {
         <div className="path-cols">
           <div className="pm-cols">
             <Link to="/physical_nav">
-              {" "}
               <img src={phlogo} alt="physical_health" className="pm-img" />
             </Link>
             <h3 className="pm-heading">Physical Health</h3>
@@ -53,7 +52,6 @@ const Home = () => {
           </div>
           <div className="pm-cols">
             <Link to="/mental_nav">
-              {" "}
               <img src={mhlogo} alt="mental_health" className="pm-img" />
             </Link>
             <h3 className="pm-heading">Mental Health</h3>
@@ -64,34 +62,30 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* <div> */}
-        <h2 className="path-section">Mission</h2>
+      <h2 className="path-section">Mission</h2>
 
-        <img
-          src={imageSrc}
-          className="SDG-img"
-          id="SDG"
-          alt="dynamic"
-          tabIndex="0"
-          onMouseOver={handleOnFocus}
-          onBlur={handleOnBlur}
-        />
-      </div>
-      {
-        <p className="sdg-text">
-          The 3rd Sustainable Development Goal (SDG 3) aims to ensure healthy
-          lives and promote well-being for all at all ages. It addresses key
-          health priorities such as reducing maternal and child mortality,
-          combating communicable and non-communicable diseases, and improving
-          mental health. Achieving this goal requires strengthening healthcare
-          systems, increasing access to essential medicines and vaccines, and
-          addressing health determinants like clean water and sanitation.
-          Efforts to meet SDG 3 are vital for sustainable development, as good
-          health is foundational to the economic, social, and environmental
-          well-being of societies.
-        </p>
-      }
-    </div>
+      <img
+        src={imageSrc}
+        className="SDG-img"
+        id="SDG"
+        alt="dynamic"
+        tabIndex="0"
+        onMouseEnter={handleOnMouseEnter}
+        onBlur={handleOnMouseLeave}
+      />
+
+      <p className="sdg-text">
+        The 3rd Sustainable Development Goal (SDG 3) aims to ensure healthy
+        lives and promote well-being for all at all ages. It addresses key
+        health priorities such as reducing maternal and child mortality,
+        combating communicable and non-communicable diseases, and improving
+        mental health. Achieving this goal requires strengthening healthcare
+        systems, increasing access to essential medicines and vaccines, and
+        addressing health determinants like clean water and sanitation. Efforts
+        to meet SDG 3 are vital for sustainable development, as good health is
+        foundational to the economic, social, and environmental well-being of
+        societies.
+      </p>
     </div>
   );
 };
