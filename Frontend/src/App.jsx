@@ -16,6 +16,7 @@ import Senses from "./components/ReduceAnxiety/Senses";
 import MentalNav from "./components/Navigators/physical/MentalNav";
 import MeditationPage from "./components/MeditationClock/meditationPage";
 import Exercise from "./components/Exercises/exercises";
+import BMI from "./components/bmi/BMI";
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
           <Route path="/mental_nav" element={<MentalNav />} />
           <Route path="/meditation" element={<MeditationPage />} />
           <Route path="/exercises" element={<Exercise />} />
+          <Route path="/bmi" element={<BMI />} />
+
         </Routes>
       </Router>
       <Footer />

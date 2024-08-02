@@ -1,0 +1,203 @@
+/* Ensure the body takes up the full viewport height and set background image */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.bmiRecipes{
+    background: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-fashion-food-poster-background-image_159294.jpg') no-repeat center center fixed;
+    background-size: cover;
+} 
+  
+  .bmi-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Take up full viewport height */
+    padding: 20px;
+    /* margin-top: 10vh; */
+  }
+  
+  .bmi-calculator {
+    padding: 20px;
+    margin-top: 10vh;
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    background-color: rgba(249, 249, 249, 0.5); /* White with 50% opacity */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .bmi-calculator h1 {
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    color: #020000;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-left: -5vw;
+    color: #020000;
+
+    width: 41vw;
+  }
+  
+  .input-group label {
+    margin-right: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    flex: 1;
+    text-align: right;
+  }
+  
+  .input-group input,
+  .input-group select {
+    padding: 8px;
+    display: flex;
+    width: 47vw;
+    flex: 2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .bmi-calculator button {
+    padding: 6px 10px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    height: 2.8rem;
+    width: 20rem;    
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .bmi-calculator button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .chart-container {
+    margin-top: 30px;
+  }
+  
+  .cal-bmi {
+    margin-top: -10rem;
+    color: #020000;
+    font-weight: bold;
+
+  }
+  
+  .result {
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .result h2 {
+    margin: 10px 0;
+  }
+  
+  .recipes {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 80rem; /* Optional: to limit width */
+    width: 100%;
+  }
+  
+  .recipes h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #020000;
+    text-align: center;
+    margin: 38px;
+  }
+  
+  .recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Increased gap between cards in horizontal direction */
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+  
+  .recipe-card {
+    width: 20%; /* Slightly reduced width to accommodate increased gaps */
+    min-width: 150px; /* Minimum width of cards */
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center-align content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .recipe-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .recipe-card img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .recipe-card h3 {
+    font-size: 1.3em;
+    font-weight: 900;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .recipe-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .recipe-card button {
+    padding: 8px 12px;
+    height: 2.4rem;
+    width: 8rem;
+    font-size: 0.9em;
+    background-color: #044080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .recipe-card button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 600px) {
+    .recipe-card {
+      width: 100%;
+    }
+  }
+  
