@@ -1,22 +1,23 @@
-import React from 'react';
+import React from "react";
 import logo from "../../assets/logo.png";
 import { IoIosAddCircleOutline } from "react-icons/io";
-import './Navbar.css';
-
+import "./Navbar.css";
 
 const Navbar = () => {
-    const style = { color: "white", fontSize: "1.5em" }
+  const style = { color: "white", fontSize: "1.5em" };
 
   return (
-    <nav className='nav-container'>
-    <a href='/'>
-    <img src={logo} className='logo-img'/>
-    </a>
-    <div>
-    <IoIosAddCircleOutline style={style}/>
+    <div className="navbar_container_main">
+      <nav className="nav-container">
+        <a href="/">
+          <img src={logo} className="logo-img" />
+        </a>
+        <div>
+          <IoIosAddCircleOutline style={style} />
+        </div>
+      </nav>
     </div>
-    </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

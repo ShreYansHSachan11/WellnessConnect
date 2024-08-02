@@ -1,0 +1,31 @@
+.main_container_physical_nav {
+}
+.physical_nav_buttons {
+  width: 22em;
+  height: 22em;
+  object-fit: fill;
+  border-radius: 100%;
+}
+.flex-buttons {
+  display: flex;
+  margin: 3em;
+  justify-content: space-evenly;
+  filter: drop-shadow(2em 1em 2em rgba(0, 128, 0, 0.217));
+}
+.button-descriptor {
+  text-align: center;
+  padding: 1em;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+}
+.Physical_Nav_top {
+  text-align: center;
+  padding-top: 5em;
+  padding-bottom: 2em;
+  width: 80vw;
+  margin-right: auto;
+  margin-left: auto;
+}

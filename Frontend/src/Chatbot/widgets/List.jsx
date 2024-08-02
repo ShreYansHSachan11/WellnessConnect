@@ -8,8 +8,7 @@ export default function List() {
       <ul>
         <li>Physical Health</li>
         <li>Mental Health</li>
-        <li>Meditation</li>
-        <li>Coping techniques</li>
+        <li> All Features</li>
       </ul>
     </>
   );

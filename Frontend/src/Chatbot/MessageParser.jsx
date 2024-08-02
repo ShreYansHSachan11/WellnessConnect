@@ -1,10 +1,14 @@
 import React from "react";
+import { createChatBotMessage } from "react-chatbot-kit";
 
 const MessageParser = ({ children, actions }) => {
   const parse = (message) => {
     const smallMessage = message.toLowerCase();
 
     if (smallMessage.includes("hello") || smallMessage.includes("hi")) {
+      actions.handleHello();
+    }
+    if (smallMessage.includes("secret")) {
       actions.handleDog();
     }
     if (smallMessage.includes("physical")) {
@@ -28,7 +32,7 @@ const MessageParser = ({ children, actions }) => {
       {React.Children.map(children, (child) => {
         return React.cloneElement(child, {
           parse: parse,
-          actions: {},
+          actions: actions, // Pass the actions correctly
         });
       })}
     </div>

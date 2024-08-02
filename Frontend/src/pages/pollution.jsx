@@ -7,6 +7,8 @@ import pol2 from "../assets/pol2.jpg";
 import pol3 from "../assets/pol3.jpg";
 import pol4 from "../assets/pol4.jpg";
 import pol5 from "../assets/pol5.jpg";
+import Navbar from "../components/navbar/Navbar";
+import Footer from "../components/footer/Footer";
 
 export default function Pollution() {
   const [location, setLocation] = useState({ lat: null, lon: null });
