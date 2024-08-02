@@ -16,18 +16,11 @@ import PhysicalNav from "./components/Navigators/physical/PhysicalNav";
 import Senses from "./components/ReduceAnxiety/Senses";
 import MentalNav from "./components/Navigators/physical/MentalNav";
 import MeditationPage from "./components/MeditationClock/meditationPage";
-import Exercise from "./components/Exercises/exercises"
-
+import Exercise from "./components/Exercises/exercises";
 
 function App() {
   return (
     <>
-<<<<<<< HEAD
-      {/* <Chat />
-       */}
-       <Home />
-      {/* <BMI/> */}
-=======
       <Chat />
       <Navbar />
       <Router>
@@ -44,7 +37,6 @@ function App() {
         </Routes>
       </Router>
       <Footer />
->>>>>>> 3a582e17509b3cfcdc2631724752df1b1952ce8c
     </>
   );
 }
