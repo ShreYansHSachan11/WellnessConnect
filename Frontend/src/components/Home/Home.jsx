@@ -6,6 +6,40 @@ import SDG_logo from "../../assets/sdg_logo.png";
 import SDG1 from "../../assets/SDG1.png";
 import SDG1_dc from "../../assets/SDG1_dc.png";
 import SDG2 from "../../assets/SDG2.png";
+import SDG2_dc from "../../assets/SDG2_dc.png";
+import SDG3 from "../../assets/SDG3.png";
+import SDG3_dc from "../../assets/SDG3_dc.png";
+import SDG4 from "../../assets/SDG4.png";
+import SDG4_dc from "../../assets/SDG4_dc.png";
+import SDG5 from "../../assets/SDG5.png";
+import SDG5_dc from "../../assets/SDG5_dc.png";
+import SDG6 from "../../assets/SDG6.png";
+import SDG6_dc from "../../assets/SDG6_dc.png";
+import SDG7 from "../../assets/SDG7.png";
+import SDG7_dc from "../../assets/SDG7_dc.png";
+import SDG8 from "../../assets/SDG8.png";
+import SDG8_dc from "../../assets/SDG8_dc.png";
+import SDG9 from "../../assets/SDG9.png";
+import SDG9_dc from "../../assets/SDG9_dc.png";
+import SDG10 from "../../assets/SDG10.png";
+import SDG10_dc from "../../assets/SDG10_dc.png";
+import SDG11 from "../../assets/SDG11.png";
+import SDG12 from "../../assets/SDG12.png";
+import SDG11_dc from "../../assets/SDG11_dc.png";
+
+import SDG12_dc from "../../assets/SDG12_dc.png";
+import SDG13 from "../../assets/SDG13.png";
+import SDG13_dc from "../../assets/SDG13_dc.png";
+import SDG14 from "../../assets/SDG14.png";
+import SDG14_dc from "../../assets/SDG14_dc.png";
+import SDG15 from "../../assets/SDG15.png";
+import SDG15_dc from "../../assets/SDG15_dc.png";
+import SDG16 from "../../assets/SDG16.png";
+import SDG16_dc from "../../assets/SDG16_dc.png";
+import SDG17 from "../../assets/SDG17.png";
+import SDG17_dc from "../../assets/SDG17_dc.png";
+import SDG18 from "../../assets/SDG18.png";
+
 
 import "./Home.css";
 
@@ -194,7 +228,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div>
+      {/* <div> */}
         <h2 className="path-section">Mission</h2>
         <div>
         <div className="sdg-logo">
@@ -341,8 +375,14 @@ const Home = () => {
           id="SDG"
           alt="dynamic"
           tabIndex="0"
-          onFocus={handleOnFocus}
-          onBlur={handleOnBlur}
+          onFocus={handleOnMouseEnter17}
+          onBlur={handleOnMouseLeave17}
+        />
+         <img
+          src={SDG18}
+          className="SDG-img"
+          id="SDG"
+          alt="adg_logo"
         />
       </div>
       {
@@ -359,6 +399,7 @@ const Home = () => {
           well-being of societies.
         </p>
       }
+    </div>
     </div>
   );
 };

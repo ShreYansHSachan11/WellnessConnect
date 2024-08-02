@@ -5,7 +5,6 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Chat from "./Chatbot/chat";
 import "./Chatbot/widgets/common.css";
-import BMI from "./components/bmi/BMI";
 import Home from "./components/Home/Home";
 import Pollution from "./pages/pollution";
 import Navbar from "./components/navbar/Navbar";
@@ -22,12 +21,6 @@ import Exercise from "./components/Exercises/exercises"
 function App() {
   return (
     <>
-<<<<<<< HEAD
-      {/* <Chat />
-       */}
-       <Home />
-      {/* <BMI/> */}
-=======
       <Chat />
       <Navbar />
       <Router>
@@ -44,7 +37,6 @@ function App() {
         </Routes>
       </Router>
       <Footer />
->>>>>>> 3a582e17509b3cfcdc2631724752df1b1952ce8c
     </>
   );
 }
