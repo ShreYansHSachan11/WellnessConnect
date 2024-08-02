@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@eslint/config-array": "^0.17.1",
+    "@eslint/object-schema": "^2.1.4",
     "axios": "^1.7.3",
     "dotenv": "^16.4.5",
     "lodash": "^4.17.21",
