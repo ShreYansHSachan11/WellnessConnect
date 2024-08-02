@@ -34,8 +34,7 @@ function App() {
           <Route path="/mental_nav" element={<MentalNav />} />
           <Route path="/meditation" element={<MeditationPage />} />
           <Route path="/exercises" element={<Exercise />} />
-          <Route path="/bmi" element={<BMI />} />
-
+          <Route path="/BMI" element={<BMI />} />
         </Routes>
       </Router>
       <Footer />
