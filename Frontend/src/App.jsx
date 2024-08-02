@@ -15,8 +15,7 @@ import PhysicalNav from "./components/Navigators/physical/PhysicalNav";
 import Senses from "./components/ReduceAnxiety/Senses";
 import MentalNav from "./components/Navigators/physical/MentalNav";
 import MeditationPage from "./components/MeditationClock/meditationPage";
-import Exercise from "./components/Exercises/exercises"
-
+import Exercise from "./components/Exercises/exercises";
 
 function App() {
   return (
