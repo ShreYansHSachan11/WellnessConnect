@@ -145,7 +145,8 @@ const HealthPage = () => {
             {activeTab === 'yoga' ? renderGrid(yogaPoses, 'yoga') : renderGrid(exercises, 'exercise')}
           </div>
         </>
-      )}
+      )} 
+      
       {selectedItem && renderDetailView()}
     </div>
   );
