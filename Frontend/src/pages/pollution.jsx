@@ -37,7 +37,8 @@ export default function Pollution() {
     if (location.lat && location.lon) {
       const fetchWeatherData = async () => {
         try {
-          const apiKey = import.meta.env.VITE_REACT_APP_OPEN_WEATHER_API_KEY;
+          // const apiKey = import.meta.env.VITE_REACT_APP_OPEN_WEATHER_API_KEY;
+          const apiKey = "af933902ff59d3ba05f4a5dc767a50e8";
           const response = await fetch(
             `http://api.openweathermap.org/data/2.5/air_pollution?lat=${location.lat}&lon=${location.lon}&appid=${apiKey}`
           );
