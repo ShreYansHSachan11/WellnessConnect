@@ -45,6 +45,11 @@ export default function All() {
             Blogs
           </button>
         </li>
+        <li>
+          <button style={buttonStyle} onClick={() => handleNavigation("/BMI")}>
+            BMI and Calorie+Recipes
+          </button>
+        </li>
       </ul>
       <h4>Mental Health</h4>
       <ul>

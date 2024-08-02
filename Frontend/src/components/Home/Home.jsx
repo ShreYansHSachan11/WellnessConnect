@@ -71,7 +71,7 @@ const Home = () => {
         alt="dynamic"
         tabIndex="0"
         onMouseEnter={handleOnMouseEnter}
-        onMouseLeave={handleOnMouseLeave}
+        onBlur={handleOnMouseLeave}
       />
 
       <p className="sdg-text">
