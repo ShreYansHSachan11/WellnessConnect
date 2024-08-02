@@ -4,7 +4,7 @@ import BlogButton from "../../../assets/defaultNews.jpg";
 import "./PhysicalNav.css";
 import { Link } from "react-router-dom";
 import WeatherButton from "../../../assets/weatherbutton.jpg";
-import yoga from "../../../assets/yoga.jpg"
+import yoga from "../../../assets/yoga.jpg";
 
 export default function PhysicalNav() {
   return (
@@ -51,6 +51,15 @@ export default function PhysicalNav() {
             <img className="physical_nav_buttons" src={yoga} />
 
             <div className="button-descriptor">Yoga and Exercises</div>
+          </Link>
+        </div>
+      </div>
+      <div className="flex-buttons">
+        <div>
+          <Link to="/BMI">
+            <img className="physical_nav_buttons" src={BlogButton} />
+
+            <div className="button-descriptor">BMI and Nutritional Info</div>
           </Link>
         </div>
       </div>
