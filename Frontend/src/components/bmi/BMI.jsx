@@ -26,7 +26,7 @@ const BMI = () => {
 
   const fetchRecipes = async () => {
     try {
-      const apiKey = "540ac31b0beb40efa3327c4725d63ae7";
+      const apiKey = import.meta.env.VITE_REACT_APP_RECIPE_API_NUTRIENTS;
       const response = await axios.get(
         `https://api.spoonacular.com/recipes/findByNutrients?minCalories=${
           bmr / 3 - 100
@@ -40,7 +40,8 @@ const BMI = () => {
 
   const fetchRecipeInfo = async (id) => {
     try {
-      const apiKey = "540ac31b0beb40efa3327c4725d63ae7";
+      const apiKey = import.meta.env.VITE_REACT_APP_RECIPE_API_NUTRIENTS;
+
       const res = await axios.get(
         `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${apiKey}`
       );
