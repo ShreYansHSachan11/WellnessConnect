@@ -146,7 +146,6 @@ const HealthPage = () => {
           </div>
         </>
       )}
-
       {selectedItem && renderDetailView()}
     </div>
   );
