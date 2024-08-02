@@ -4,13 +4,17 @@
 import "./App.css";
 import Chat from "./Chatbot/chat";
 import "./Chatbot/widgets/common.css";
+import BMI from "./components/bmi/BMI";
 import Home from "./components/Home/Home";
+
 
 function App() {
   return (
     <>
-      <Chat />
-      <Home />
+      {/* <Chat />
+       */}
+       <Home />
+      {/* <BMI/> */}
     </>
   );
 }

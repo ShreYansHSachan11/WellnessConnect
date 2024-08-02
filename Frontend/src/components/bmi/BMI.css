@@ -1,0 +1,149 @@
+.bmi-calculator {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bmi-calculator h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    margin-right: 10px;
+    font-weight: bold;
+    flex: 1;
+    text-align: right;
+  }
+  
+  .input-group input,
+  .input-group select {
+    padding: 8px;
+    width: 200px;
+    flex: 2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .bmi-calculator button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .bmi-calculator button:hover {
+    background-color: #0056b3;
+  }
+  
+  .chart-container {
+    margin-top: 30px;
+  }
+  
+  .result {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    top: -10rem; /* Move the result text up */
+  }
+  
+  .result h2 {
+    margin: 10px 0;
+  }
+  
+  @media (max-width: 600px) {
+    .bmi-calculator {
+      padding: 10px;
+    }
+  
+    .input-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .input-group label {
+      margin-bottom: 5px;
+      text-align: left;
+    }
+  
+    .input-group input,
+    .input-group select {
+      width: 100%;
+    }
+  
+    .bmi-calculator button {
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
+  
+  /* Recipes section */
+  .recipes {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recipes h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .recipe-card {
+    width: 45%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .recipe-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .recipe-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .recipe-card p {
+    margin: 5px 0;
+  }
+  
+  @media (max-width: 600px) {
+    .recipe-card {
+      width: 100%;
+    }
+  }
+  

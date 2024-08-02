@@ -110,7 +110,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .sdg-text{
@@ -120,4 +120,21 @@
     text-align: start;
     font-family: "Economica", sans-serif;
     
+}
+.sdg-logo{
+    text-align: center;
+    margin-bottom: 4vh;
+    /* align-items: center; */
+    /* justify-content: center;  */
+}
+.sdg-img{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.sdg-img img{
+    height: 25vh;
+    width: 13vw;
 }
