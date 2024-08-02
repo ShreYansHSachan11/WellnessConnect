@@ -28,8 +28,8 @@ export default function WeatherHealth() {
     if (location.lat && location.lon) {
       const fetchWeatherData = async () => {
         try {
-          // const apiKey = import.meta.env.VITE_REACT_APP_OPEN_WEATHER_API_KEY;
-          const apiKey = "af933902ff59d3ba05f4a5dc767a50e8";
+          const apiKey = import.meta.env.VITE_REACT_APP_OPEN_WEATHER_API_KEY;
+
           const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lon}&appid=${apiKey}`
           );
