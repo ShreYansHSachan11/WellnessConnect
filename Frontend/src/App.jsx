@@ -5,6 +5,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Chat from "./Chatbot/chat";
 import "./Chatbot/widgets/common.css";
+import BMI from "./components/bmi/BMI";
 import Home from "./components/Home/Home";
 import Pollution from "./pages/pollution";
 import Navbar from "./components/navbar/Navbar";
@@ -15,10 +16,18 @@ import PhysicalNav from "./components/Navigators/physical/PhysicalNav";
 import Senses from "./components/ReduceAnxiety/Senses";
 import MentalNav from "./components/Navigators/physical/MentalNav";
 import MeditationPage from "./components/MeditationClock/meditationPage";
+import Exercise from "./components/Exercises/exercises"
+
 
 function App() {
   return (
     <>
+<<<<<<< HEAD
+      {/* <Chat />
+       */}
+       <Home />
+      {/* <BMI/> */}
+=======
       <Chat />
       <Navbar />
       <Router>
@@ -31,9 +40,11 @@ function App() {
           <Route path="/sense" element={<Senses />} />
           <Route path="/mental_nav" element={<MentalNav />} />
           <Route path="/meditation" element={<MeditationPage />} />
+          <Route path="/exercises" element={<Exercise />} />
         </Routes>
       </Router>
       <Footer />
+>>>>>>> 3a582e17509b3cfcdc2631724752df1b1952ce8c
     </>
   );
 }
