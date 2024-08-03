@@ -1,6 +1,5 @@
 
 .container{
-    margin-top: 10vh;
     color: black;
     background-color: #99BC85;
     padding-top: 1rem;
@@ -15,9 +14,24 @@
     left: 0;
     align-items: center;
     justify-content: center;
-    gap: 20vw;
+    gap: 10vw;
     margin-bottom: 5vh;
     font-size: 1.3rem;
+
+}
+
+.row1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10vw;
+    margin-bottom: 5vh;
+    text-align: start;
+}
+
+.services-row{
+    text-align: center;
 }
   
 .footer-row{
@@ -25,4 +39,10 @@
     justify-content: center;
     text-align: center;
     padding: 2vh;
+    font-weight: bold;
+}
+
+.list-unstyled a {
+    color: #070707;
+    text-decoration: none;
 }
