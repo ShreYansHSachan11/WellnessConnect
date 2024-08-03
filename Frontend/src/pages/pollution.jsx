@@ -39,7 +39,7 @@ export default function Pollution() {
         try {
           const apiKey = import.meta.env.VITE_REACT_APP_OPEN_WEATHER_API_KEY;
           const response = await fetch(
-            `http://api.openweathermap.org/data/2.5/air_pollution?lat=${location.lat}&lon=${location.lon}&appid=${apiKey}`
+            `https://api.openweathermap.org/data/2.5/air_pollution?lat=${location.lat}&lon=${location.lon}&appid=${apiKey}`
           );
           if (!response.ok) {
             throw new Error("Network not ok");

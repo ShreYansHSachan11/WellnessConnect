@@ -15,10 +15,12 @@ export default function Physical() {
     <>
       <ul>
         <li>
-          <button style={buttonStyle}>Yoga</button>
-        </li>
-        <li>
-          <button style={buttonStyle}>Exercises</button>
+          <button
+            onClick={() => handleNavigation("/exercises")}
+            style={buttonStyle}
+          >
+            Yoga and Exercises
+          </button>
         </li>
         <li>
           <button
